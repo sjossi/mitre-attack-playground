@@ -14,11 +14,11 @@ for technique in techniques:
                 datasources[datasource] = []
             for reference in technique.external_references:
                 if reference.source_name == 'mitre-attack':
-                    datasources[datasource].append((reference.external_id, reference.url))
+                    datasources[datasource].append([technique.name, reference.external_id, reference.url])
     except AttributeError:
         pass
 
 print("datasource,technique-id,technique-url")
 for datasource in datasources:
     for technique in datasources[datasource]:
-        print("\"{}\",\"{}\",\"{}\"".format(datasource, technique[0], technique[1]))
+        print("\"{}\",\"{}\",\"{}\",\"{}\"".format(datasource, technique[0], technique[1], technique[2]))
