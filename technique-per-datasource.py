@@ -18,7 +18,7 @@ for technique in techniques:
     except AttributeError:
         pass
 
-print("datasource,technique-id,technique-url")
+print("datasource,technique-name,technique-id,technique-url")
 for datasource in datasources:
     for technique in datasources[datasource]:
         print("\"{}\",\"{}\",\"{}\",\"{}\"".format(datasource, technique[0], technique[1], technique[2]))
