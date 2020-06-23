@@ -21,4 +21,4 @@ for technique in techniques:
 print("datasource,technique-id,technique-url")
 for datasource in datasources:
     for technique in datasources[datasource]:
-        print("'{}','{}','{}'".format(datasource, technique[0], technique[1]))
+        print("\"{}\",\"{}\",\"{}\"".format(datasource, technique[0], technique[1]))
